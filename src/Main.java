@@ -51,14 +51,6 @@ public class Main {
 		
 		System.out.println("End of distribution :");
 		
-		System.out.println("Day 5 :");
-		System.out.println("Beginning of distribution :");
-		
-		c.distributeLetters();
-		
-		System.out.println("End of distribution :");
-		
-		
 	}
 
 }
