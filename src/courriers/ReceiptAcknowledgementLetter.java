@@ -8,7 +8,7 @@ public class ReceiptAcknowledgementLetter extends SimpleLetter {
 	}
 
 	public String toString() {
-		return "receipt acknowledgement letter";
+		return "a receipt acknowledgement letter whose content is " + content.toString() ;
 	}
 
 }

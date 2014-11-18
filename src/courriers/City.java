@@ -21,7 +21,9 @@ public class City {
 
 	@SuppressWarnings("rawtypes")
 	public void distributeLetters() {
-		for (Letter l : this.letterbox) {
+		List<Letter<?>> lbTemp = new LinkedList<Letter<?>>() ;
+		lbTemp.addAll(letterbox) ;
+		for (Letter l : lbTemp) {
 			l.getReceiver().receivesLetter(l);
 			this.letterbox.remove(l);
 		}

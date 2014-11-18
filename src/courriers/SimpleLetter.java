@@ -17,7 +17,7 @@ public class SimpleLetter extends Letter<Text> {
 	}
 
 	public String toString() {
-		return "simple letter";
+		return "a simple letter whose content is " + getContent().toString() ;
 	}
 
 }

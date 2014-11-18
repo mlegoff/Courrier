@@ -14,6 +14,7 @@ public class PromissaryNote extends Letter<Money> {
 
 	public void action() {
 		int money = this.content.getValue().intValue();
+		this.sender.getAccount().debit(money);
 		this.receiver.getAccount().credit(money);
 		String th = "Thank you";
 		ThanksLetter thank = new ThanksLetter(this.receiver, this.sender, th);
@@ -21,7 +22,7 @@ public class PromissaryNote extends Letter<Money> {
 	}
 
 	public String toString() {
-		return "promissary note";
+		return "a promissary note whose content is " + content.toString() ;
 	}
 
 }

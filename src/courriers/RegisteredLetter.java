@@ -16,7 +16,7 @@ public class RegisteredLetter<T extends Letter<?>> extends
 	}
 
 	public String toString() {
-		return "registered letter";
+		return "a registered letter whose content is " + content.toString() ;
 	}
 
 	public int getCost() {

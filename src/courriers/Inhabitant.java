@@ -9,7 +9,7 @@ public class Inhabitant {
 	public Inhabitant(String n, City c) {
 		this.city = c;
 		this.name = n;
-		BankAccount bank = new BankAccount();
+		BankAccount bank = new BankAccount(name);
 		this.account = bank;
 	}
 
@@ -23,23 +23,18 @@ public class Inhabitant {
 
 	@SuppressWarnings("rawtypes")
 	public void postsLetter(Letter le) {
-		this.city.sendLetter(le);
+		this.city.sendLetter(le);		
+		System.out.println("-> " + this.name + " mails " + le.toString()
+				+ " to" + le.getReceiver().toString() + " for a cost of "
+				+ le.getCost());
 		this.account.debit(le.getCost());
-		System.out.println(this.name + " mails a " + le.toString()
-				+ " whose content is a " + le.getContent().toString() + " to"
-				+ le.getReceiver().toString() + " for a cost of "
-				+ le.getCost() + " -" + le.getCost()
-				+ " euros are debited from " + this.name
-				+ " account whose balance is now "
-				+ this.getAccount().getAccount());
 
 	}
 
 	@SuppressWarnings("rawtypes")
 	public void receivesLetter(Letter le) {
-		System.out.println(this.name + " receives a " + le.toString()
-				+ " whose content is a " + le.getContent().toString() + " from"
-				+ le.getSender().toString());
+		System.out.println("<- " + this.name + " receives " + le.toString()
+				+ " from" + le.getSender().toString());
 		le.action();
 	}
 

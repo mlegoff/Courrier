@@ -7,6 +7,6 @@ public class ThanksLetter extends SimpleLetter {
 	}
 
 	public String toString() {
-		return "thanks letter";
+		return "a thanks letter whose content is " + content.toString();
 	}
 }

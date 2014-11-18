@@ -37,7 +37,7 @@ public class Letter<T extends Content> implements Content {
 	}
 
 	public String toString() {
-		return "letter";
+		return "a letter whose content is " + content.toString() ;
 	}
 
 }
