@@ -18,31 +18,25 @@ public class Letter<T extends Content> implements Content {
 	}
 
 	public void action() {
-
 	}
 
 	public T getContent() {
-
 		return this.content;
 	}
 
 	public int getCost() {
-
 		return 0;
 	}
 
 	public Inhabitant getReceiver() {
-
 		return this.receiver;
 	}
 
 	public Inhabitant getSender() {
-
 		return this.sender;
 	}
 
 	public String toString() {
-
 		return "letter";
 	}
 
