@@ -17,15 +17,12 @@ public abstract class Letter<T extends Content> implements Content {
 		this.sender = sender;
 	}
 
-	public void action() {
-	}
+	public abstract void action();
+
+	public abstract int getCost();
 
 	public T getContent() {
 		return this.content;
-	}
-
-	public int getCost() {
-		return 0;
 	}
 
 	public Inhabitant getReceiver() {
@@ -37,7 +34,7 @@ public abstract class Letter<T extends Content> implements Content {
 	}
 
 	public String toString() {
-		return "a letter whose content is " + content.toString() ;
+		return "a letter whose content is " + content.toString();
 	}
 
 }
