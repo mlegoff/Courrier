@@ -31,8 +31,27 @@ public class TestInhabitant {
 		assertNotEquals(j.getAccount(), i.getAccount()) ;
 	}
 	
+	@Test
+	public void TestPostLetter() {
+		City c = new City("BernardTown");
+		Inhabitant i = new Inhabitant("Bernard", c);
+		Inhabitant j = new Inhabitant("Arthur", c) ;
+		SimpleLetter s = new SimpleLetter(i, j, "Coucou") ;
+		
+		i.postsLetter(s) ;
+		
+		
+		
+	}
 	
 	
+	@Test
+	public void TestReceiveLetter() {
+		City c = new City("BernardTown");
+		Inhabitant i = new Inhabitant("Bernard", c);
+		
+		
+	}
 	
 	
 }
