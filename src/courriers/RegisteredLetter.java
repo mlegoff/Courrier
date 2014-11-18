@@ -10,8 +10,8 @@ public class RegisteredLetter<T extends Letter<?>> extends
 	}
 
 	public void action() {
-		ReceiptAcknowledgementLetter receipt = new ReceiptAcknowledgementLetter(this.receiver,
-				this.sender, "Acknowledged");
+		ReceiptAcknowledgementLetter receipt = new ReceiptAcknowledgementLetter(
+				this.receiver, this.sender, "Acknowledged");
 		this.sender.getCity().sendLetter(receipt);
 	}
 

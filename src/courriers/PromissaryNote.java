@@ -9,8 +9,7 @@ public class PromissaryNote extends Letter<Money> {
 	}
 
 	public int getCost() {
-		int cost = 1 + (this.content.getValue().intValue()) / 100;
-		return cost;
+		return DEFAULT_COST + (this.content.getValue().intValue()) / 100;
 	}
 
 	public void action() {
@@ -19,11 +18,9 @@ public class PromissaryNote extends Letter<Money> {
 		String th = "Thank you";
 		ThanksLetter thank = new ThanksLetter(this.receiver, this.sender, th);
 		this.receiver.postsLetter(thank);
-
 	}
 
 	public String toString() {
-
 		return "promissary note";
 	}
 
