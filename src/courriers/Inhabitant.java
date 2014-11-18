@@ -21,12 +21,12 @@ public class Inhabitant {
 		return this.city;
 	}
 
-	public void postsLetter(Letter le) {
+	public void postsLetter(Letter<Content> le) {
 		this.city.sendLetter(le);
 		this.account.debit(le.getCost());
 	}
 
-	public void receivesLetter(Letter le) {
+	public void receivesLetter(Letter<Content> le) {
 		le.action();
 	}
 
