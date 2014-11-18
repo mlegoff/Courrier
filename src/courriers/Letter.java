@@ -12,7 +12,6 @@ public class Letter<T extends Content> implements Content {
 	 * @param sender
 	 */
 	public Letter(T content, Inhabitant receiver, Inhabitant sender) {
-		super();
 		this.content = content;
 		this.receiver = receiver;
 		this.sender = sender;

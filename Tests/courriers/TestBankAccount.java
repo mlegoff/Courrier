@@ -16,7 +16,7 @@ public class TestBankAccount {
 	@Test
 	public void TestGetAccount() {
 		BankAccount b = new BankAccount();
-		assertEquals(BankAccount.DEFAULT_AMOUNT, b.getAccount());
+		assertEquals(100, b.getAccount());
 	}
 
 	@Test

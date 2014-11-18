@@ -3,7 +3,7 @@ package courriers;
 public class BankAccount {
 
 	private int account;
-	public static final int DEFAULT_AMOUNT = 100;
+	private static final int DEFAULT_AMOUNT = 100;
 
 	public BankAccount() {
 		account = DEFAULT_AMOUNT;
