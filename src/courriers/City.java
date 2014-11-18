@@ -12,7 +12,7 @@ public class City {
 		List<Inhabitant> newlist = new LinkedList<Inhabitant>();
 		this.name = n;
 		this.inhabitants = newlist;
-
+		letterbox = new LinkedList<Letter<?>>();
 	}
 
 	public void addHabitant(Inhabitant habitant) {
@@ -36,4 +36,10 @@ public class City {
 		return name;
 	}
 
+	public List<Inhabitant> getInhabitants() {
+		return inhabitants ;
+	}
+	
+	
+	
 }

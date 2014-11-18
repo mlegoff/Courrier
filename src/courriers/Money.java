@@ -6,4 +6,8 @@ public class Money extends AbstractContent<Integer> {
 		super(value);
 	}
 
+	public String toString() {
+		return "a money content (" + this.getValue() + ")";
+	}
+	
 }

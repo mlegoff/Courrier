@@ -22,8 +22,7 @@ public abstract class AbstractContent<T> implements Content {
 	 */
 	@Override
 	public String toString() {
-		return "a " + value.getClass().toString().toLowerCase() + " content ("
-				+ value + ")";
+		return value.toString();
 	}
 
 }
