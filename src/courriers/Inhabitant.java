@@ -25,7 +25,7 @@ public class Inhabitant {
 	public void postsLetter(Letter le) {
 		this.city.sendLetter(le);		
 		System.out.println("-> " + this.name + " mails " + le.toString()
-				+ " to" + le.getReceiver().toString() + " for a cost of "
+				+ " to " + le.getReceiver().toString() + " for a cost of "
 				+ le.getCost());
 		this.account.debit(le.getCost());
 
@@ -34,7 +34,7 @@ public class Inhabitant {
 	@SuppressWarnings("rawtypes")
 	public void receivesLetter(Letter le) {
 		System.out.println("<- " + this.name + " receives " + le.toString()
-				+ " from" + le.getSender().toString());
+				+ " from " + le.getSender().toString());
 		le.action();
 	}
 

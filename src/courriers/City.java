@@ -6,6 +6,7 @@ public class City {
 
 	private List<Inhabitant> inhabitants;
 	private List<Letter<?>> letterbox;
+
 	private String name;
 
 	public City(String n) {
@@ -21,8 +22,8 @@ public class City {
 
 	@SuppressWarnings("rawtypes")
 	public void distributeLetters() {
-		List<Letter<?>> lbTemp = new LinkedList<Letter<?>>() ;
-		lbTemp.addAll(letterbox) ;
+		List<Letter<?>> lbTemp = new LinkedList<Letter<?>>();
+		lbTemp.addAll(letterbox);
 		for (Letter l : lbTemp) {
 			l.getReceiver().receivesLetter(l);
 			this.letterbox.remove(l);
@@ -39,9 +40,10 @@ public class City {
 	}
 
 	public List<Inhabitant> getInhabitants() {
-		return inhabitants ;
+		return inhabitants;
 	}
-	
-	
-	
+
+	public List<Letter<?>> getLetterbox() {
+		return letterbox;
+	}
 }
