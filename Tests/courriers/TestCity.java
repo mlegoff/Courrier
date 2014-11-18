@@ -41,11 +41,9 @@ public class TestCity {
 		Inhabitant i = new Inhabitant("Jean", c);
 		Inhabitant j = new Inhabitant("Jeanne", c);
 		SimpleLetter sl = new SimpleLetter(i, j, "TEST");
-		RegisteredLetter<SimpleLetter> RS = new RegisteredLetter<SimpleLetter>(
-				sl);
+		RegisteredLetter<SimpleLetter> RS = new RegisteredLetter<SimpleLetter>(sl);
 		PromissaryNote pn = new PromissaryNote(i, j, 1);
-		RegisteredLetter<PromissaryNote> RPN = new RegisteredLetter<PromissaryNote>(
-				pn);
+		RegisteredLetter<PromissaryNote> RPN = new RegisteredLetter<PromissaryNote>(pn);
 
 		i.postsLetter(sl);
 		c.distributeLetters();
@@ -59,7 +57,7 @@ public class TestCity {
 		assertTrue(c.getLetterbox().isEmpty());
 
 		i.postsLetter(RPN);
-		for (int k = 0; k < 3; k++) {
+		for (int k = 0; k < 2; k++) {
 			assertFalse(c.getLetterbox().isEmpty());
 			c.distributeLetters();
 		}
