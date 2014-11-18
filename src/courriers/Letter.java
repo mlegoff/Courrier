@@ -1,6 +1,6 @@
 package courriers;
 
-public class Letter<T extends Content> implements Content {
+public abstract class Letter<T extends Content> implements Content {
 
 	protected T content;
 	protected Inhabitant receiver;
