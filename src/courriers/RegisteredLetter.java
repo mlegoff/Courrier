@@ -13,6 +13,7 @@ public class RegisteredLetter<T extends Letter<?>> extends
 		ReceiptAcknowledgementLetter receipt = new ReceiptAcknowledgementLetter(
 				this.receiver, this.sender, "Acknowledged");
 		this.sender.getCity().sendLetter(receipt);
+		content.action();
 	}
 
 	public String toString() {

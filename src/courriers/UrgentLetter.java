@@ -12,11 +12,10 @@ public class UrgentLetter<T extends Letter<?>> extends
 	}
 
 	public String toString() {
-		return "an urgent letter whose content is " + content.toString() ;
+		return "an urgent letter whose content is " + content.toString();
 	}
 
 	public void action() {
-
+		content.action();
 	}
-
 }
