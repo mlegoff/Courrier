@@ -7,4 +7,8 @@ public class Money extends AbstractContent<Integer> {
 
 	}
 
+	public String toString() {
+		return "a money content (" + this.getValue() + ")";
+	}
+
 }

@@ -43,8 +43,8 @@ public class Letter<T extends Content> implements Content {
 	}
 
 	public String toString() {
-		
-		return "Charles-en-Raï" ;
+
+		return "letter";
 	}
 
 }

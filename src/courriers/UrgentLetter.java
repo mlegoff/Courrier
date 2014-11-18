@@ -3,20 +3,22 @@ package courriers;
 public class UrgentLetter<T extends Letter<?>> extends
 		AbstractLetterDecorator<T> {
 
+	private Letter<?> l;
+
 	public UrgentLetter(T letter) {
 		super(letter);
-		// TODO Stub du constructeur généré automatiquement
 	}
 
-	@Override
+	public int getCost() {
+		return this.l.getCost() * 2;
+	}
+
 	public String toString() {
-		// TODO Stub de la méthode généré automatiquement
-		return null;
+		return "urgent letter";
 	}
 
-	@Override
 	public void action() {
-		sender.getAccount().debit(2 * content.getCost()) ;
+
 	}
 
 }

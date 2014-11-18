@@ -21,12 +21,25 @@ public class Inhabitant {
 		return this.city;
 	}
 
-	public void postsLetter(Letter<Content> le) {
+	@SuppressWarnings("rawtypes")
+	public void postsLetter(Letter le) {
 		this.city.sendLetter(le);
 		this.account.debit(le.getCost());
+		System.out.println(this.name + " mails a " + le.toString()
+				+ " whose content is a " + le.getContent().toString() + " to"
+				+ le.getReceiver().toString() + " for a cost of "
+				+ le.getCost() + " -" + le.getCost()
+				+ " euros are debited from " + this.name
+				+ " account whose balance is now "
+				+ this.getAccount().getAccount());
+
 	}
 
-	public void receivesLetter(Letter<Content> le) {
+	@SuppressWarnings("rawtypes")
+	public void receivesLetter(Letter le) {
+		System.out.println(this.name + " receives a " + le.toString()
+				+ " whose content is a " + le.getContent().toString() + " from"
+				+ le.getSender().toString());
 		le.action();
 	}
 
