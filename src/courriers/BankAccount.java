@@ -3,28 +3,30 @@ package courriers;
 public class BankAccount {
 
 	private int account;
-	private static final int DEFAULT_AMOUNT = 100 ;
+	public static final int DEFAULT_AMOUNT = 100;
 
 	public BankAccount() {
-
+		account = DEFAULT_AMOUNT;
 	}
 
 	public void credit(int a) {
-		this.account += a;
+		if (a > 0) {
+			this.account += a;
+		}
 	}
 
 	public void debit(int a) {
-		if ((this.account- a) < 0) {
-			this.account= 0;
-		} else {
-			this.account -= a;
+		if (a > 0) {
+			if ((this.account - a) < 0) {
+				this.account = 0;
+			} else {
+				this.account -= a;
+			}
 		}
 	}
-	
-	public int getAccount(){
+
+	public int getAccount() {
 		return this.account;
 	}
-	
-		
 
 }
